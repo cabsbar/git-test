@@ -3,7 +3,7 @@ import { users } from "./UserListV2";
 
 export default function Detail() {
   const userName = useParams();
-  const user = users.find((obj) => {
+  const user = users.data.find((obj) => {
     return obj.id == userName.id;
   });
   

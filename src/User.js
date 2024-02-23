@@ -12,7 +12,7 @@ export default function User() {
   return (
     <>
       <div className="container">
-        {users.map((user) => (
+        {users.data.map((user) => (
           <div className="column">
             <div className="card">
               <img src={user.picture} />
