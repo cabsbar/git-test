@@ -20,7 +20,7 @@ export const data = [
     isActive: "TRUE",
     balance: 3.04,
     picture: "http://placehold.it/32x32",
-    name: "Kristine Vance",
+    name: "Kristine Vance 2017",
     gender: "female",
     country_id: "1",
     email: "oceanic_sunset123@outlook.com",

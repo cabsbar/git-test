@@ -1,24 +1,26 @@
 import { useParams } from "react-router-dom";
-import { data } from "./UserList";
+import { users } from "./UserListV2";
 
 export default function Detail() {
   const userName = useParams();
-  const player = data.find((obj) => {
+  const user = users.find((obj) => {
     return obj.id == userName.id;
   });
-  let cost = player.cost.toLocaleString();
+  
   return (
     <div className="container">
       <div className="product-card">
-        <div className="badge">{player.name}</div>
-        <div className="product-tumb">
-          <img src={`../${player.img}`} alt="" />
-        </div>
+        <div className="badge">Fullname: {user.name}</div>
+        <div className="badge">Email: {user.email}</div>
+        <div className="badge">Birthday: {user.birthday}</div>
+        <div className="badge">Gender: {user.gender}</div>
+        <div className="badge">Phone No: {user.phone}</div>
+        <div className="badge">Join date: {user.registered}</div>
         <div className="product-details">
-          <h4>{player.club}</h4>
-          <div className="product-price">Market value: €{cost}</div>
-          <p>{player.info}</p>
-          <div className="product-bottom-details"></div>
+          <h4>{user.roles}</h4>
+          <div className="product-price">Balance: ${user.balance}</div>
+          <p>Bio: {user.about}</p>
+          <div className="product-bottom-details">Account active: {user.isActive}</div>
         </div>
       </div>
     </div>
