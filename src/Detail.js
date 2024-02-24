@@ -10,6 +10,7 @@ export default function Detail() {
   return (
     <div className="container">
       <div className="product-card">
+        <img src={user.picture} />
         <div className="badge">Fullname: {user.name}</div>
         <div className="badge">Email: {user.email}</div>
         <div className="badge">Birthday: {user.birthday}</div>
@@ -20,7 +21,7 @@ export default function Detail() {
           <h4>{user.roles}</h4>
           <div className="product-price">Balance: ${user.balance}</div>
           <p>Bio: {user.about}</p>
-          <div className="product-bottom-details">Account active: {user.isActive}</div>
+          <div className="product-bottom-details">Country Code: {user.country_id}</div>
         </div>
       </div>
     </div>
